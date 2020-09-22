@@ -32,7 +32,7 @@ const ProductsList = (props) => {
 
   if (filtersContext.filters.max !== null) {
     filteredProducts = filteredProducts.filter((product) => {
-      return product.price < filtersContext.filters.min;
+      return product.price < filtersContext.filters.max;
     });
   }
 

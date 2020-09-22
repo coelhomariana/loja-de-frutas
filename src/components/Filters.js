@@ -13,6 +13,13 @@ const Filters = (props) => {
     filtersContext.dispatch({ type: "SET_FILTERS", filters: newFilters });
   };
 
+  const handleResetFilters = () => {
+    filtersContext.dispatch({ type: "RESET_FILTERS" });
+    setMin("");
+    setMax("");
+    setName("");
+  };
+
   return (
     <div>
       <h4>Filtros</h4>
@@ -35,6 +42,7 @@ const Filters = (props) => {
         onChange={(event) => setName(event.target.value)}
       />
       <button onClick={handleApplyFilter}>Aplicar filtro</button>
+      <button onClick={handleResetFilters}>Limpar filtros</button>
     </div>
   );
 };

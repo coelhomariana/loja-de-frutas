@@ -19,3 +19,12 @@ export const ProductItem = styled.div`
   justify-items: center;
   align-items: center;
 `;
+
+export const DeleteButton = styled.span`
+  color: red;
+  cursor: pointer;
+
+  :hover {
+    font-weight: bold;
+  }
+`

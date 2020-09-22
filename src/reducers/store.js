@@ -32,14 +32,25 @@ export const storeReducer = (state, action) => {
 
       return { ...state, cart: newCart };
 
-    case "REMOVE_ITEM_FROM_CART":
-      return state;
+    case "REMOVE_ITEM_FROM_CART": {
+      const newCart = state.cart.filter((product) => {
+        return product.id !== action.productId;
+      });
+
+      return { ...state, cart: newCart };
+    }
 
     case "SET_FILTERS":
       return {
         ...state,
         filters: action.filters,
       };
+
+      case "RESET_FILTERS":
+        return {
+          ...state,
+          filters: initialState.filters
+        };
     default:
       return state;
   }
