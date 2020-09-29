@@ -3,9 +3,9 @@ Projeto em React simulando uma loja com carrinho de compras e filtros funcionand
 Os produtos foram consumidos de uma API.
 
 ## Tecnologias usadas: 
-• React 
-• React Hooks (useState, useEffect, useReducer)
-• React Context
+- React 
+- React Hooks (useState, useEffect, useReducer)
+- React Context
 
 ## Link:
 grotesque-farmer.surge.sh
